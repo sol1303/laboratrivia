@@ -4,15 +4,15 @@ var respuestasCorrectas = document.getElementById('respuestasCorrectas');
 var respuestasIncorrectas= document.getElementById('respuestasIncorrectas');
 
 
-function checkName(){
+function MyFunction(){
+  mostrarResultados.style.display= "";
 
-  var name = document.name.value;
+  var nombreUsuario = prompt("Ingresa tu nombre:");
 saludarUsario.innerHTML = "😊 Bienvenid@ " + nombreUsuario + " 😊" ;
 
 var iniciarPartida = parseInt(prompt("Ingresa el número que corresponda a tu respuesta \n ¿Quieres iniciar la partida? \n 1.Si \n 2.No"));
 
 
-mostrarResultados.style.display = '';
 if (iniciarPartida == 2) {
   mostrarResultados.innerHTML =  "<h1>Gracias por visitarnos, nos vemos la próxima 😉 </h1>";
 }
@@ -37,4 +37,5 @@ else {
   } else {
     respuestasIncorrectas.innerHTML += "<br> 2.¿Qué es lo que más le gusta hacer a Lulú? <br> <strong>Respuesta correcta:</strong> 🎤 Cantar 🎤";
   }
+}
 }
